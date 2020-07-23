@@ -1,38 +1,66 @@
+*{
+  margin:0;
+  padding: 0;
+}
 .App {
-  text-align: center;
+  background-color: #fafafafa; 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__posts{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__postsRight{
+  margin-left: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__header{
+  background-color: #ffffff;
+  object-fit: contain;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.app__headerImage{
+  object-fit: contain;
+}
+.app__signUp{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1024px) {
+  .app__headerImage{
+   margin-left: 10px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 600px) {
+  .app__postsRight{
+    display: none;   
+  }
+}
+@media screen and (max-width: 460px) {
+  .app__modal{
+    width:auto;
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .app__postsRight{
+    display: none;
+  }
+  .app__modal{
+    width:auto;
+    margin-left: 80px;
+  }
+  .app__modal img{
+    margin-left: -50px;
+  }
+  .app__modal Button{
+    margin-left: -50px;
   }
 }
